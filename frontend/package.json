@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'frontend scaffolding comes in phase 7' && exit 0",
+    "build": "echo 'no build yet' && exit 0",
+    "test": "echo 'no tests yet' && exit 0"
+  }
+}

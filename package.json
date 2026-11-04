@@ -1,0 +1,32 @@
+{
+  "name": "task-manager",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Full-stack task manager with JWT auth, React + TypeScript, Node.js + Express, PostgreSQL, Docker and CI.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace backend & npm run dev --workspace frontend",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc -b --pretty false",
+    "test:backend": "npm test --workspace backend",
+    "test:frontend": "npm test --workspace frontend",
+    "test": "npm run test:backend && npm run test:frontend"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "prettier": "^3.9.10",
+    "typescript": "^5.4.0"
+  }
+}
